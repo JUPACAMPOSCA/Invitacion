@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
     <title>Bodas de Plata</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .background-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/anillos.jpg');
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+        }
+
+        .background-text {
+            position: absolute;
+            width: 270px;
+            top: calc(100vh - 80%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #C0C0C0;
+            font-family: 'Fleur De Leah', cursive;
+            font-size: 50px;
+            z-index: 1;
+        }
+
+        .background-image2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/novios.jpeg');
+            background-size: cover;
+            background-position: center center;
+            z-index: -1;
+        }
+        
+        .background-text2 {
+            position: absolute;
+            width: 270px;
+            top: calc(100vh - 85%);
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #C0C0C0;
+            font-family: 'Fleur De Leah', cursive;
+            font-size: 40px;
+            z-index: 1;
+        }
+
+        .bienvenida {
+            position: absolute;
+            text-align: center;
+            font-family: 'Frank Ruhl Libre', serif;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Nuestras Bodas de Plata</h1>
+    <div class="background-container">
+        <div class="background-image"></div>
+        <div class="background-text">
+            <p>Nuestras Bodas de Plata</p>
+        </div>
+    </div>
+    <div class="background-container">
+        <div class="background-image2"></div>
+        <div class="background-text2">
+            <p>Juan Y Chuyita</p>
+        </div>
+    </div>
+    <div class="bienvenida">
+        <p>LES COMPARTIMOS DE NUESTRA ALEGRÍA POR ESTOS 25 AÑOS UNIDOS CON LA GRACIA DE DIOS Y...</p>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            $('.background-image').css({
+                'opacity': 1 - (scroll / 700)
+            });
+            $('.background-text').css({
+                'opacity': 1 - (scroll / 700),
+                'top': 'calc(100vh + ' + (scroll / 10) + 'vh - 80%)'
+            });
+            $('.background-image2').css({
+                'opacity': 2 - (scroll / 700)
+            });
+            $('.background-text2').css({
+                'opacity': 2 - (scroll / 700),
+                'top': 'calc(100vh + ' + (scroll / 50) + 'vh - 90%)'
+            });
+        });
+    </script>
 </body>
+
 </html>
