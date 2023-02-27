@@ -8,7 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Frank+Ruhl+Libre:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Frank+Ruhl+Libre:wght@300&display=swap"
+        rel="stylesheet">
     <title>Bodas de Plata</title>
     <style>
         body {
@@ -58,7 +59,7 @@
             background-position: center center;
             z-index: -1;
         }
-        
+
         .background-text2 {
             position: absolute;
             width: 270px;
@@ -73,10 +74,115 @@
         }
 
         .bienvenida {
-            position: absolute;
+            position: relative;
             text-align: center;
             font-family: 'Frank Ruhl Libre', serif;
         }
+        .nombre-hijos {
+            position: relative;
+            background-image: url('/familia.png');
+            background-size: cover;
+            background-position: center center;
+            color: white;
+            font-size: 25px;
+            z-index: -1;
+            font-family: 'Frank Ruhl Libre', serif;
+        }
+        .parroquia {
+            position: relative;
+            background-image: url('/parroquia.webp');
+            background-size: cover;
+            background-position: center center;
+            color: #C0C0C0;
+            font-size: 25px;
+            z-index: -1;
+            font-family: 'Frank Ruhl Libre', serif;
+        }
+        .parroquia-text {
+            position: relative;
+            width: 270px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            color: #dddddd;
+            font-size: 20px;
+            z-index: 1;
+        }
+        .lugar {
+            position: relative;
+            background-image: url('/Casino.jfif');
+            background-size: cover;
+            background-position: center center;
+            color: #C0C0C0;
+            font-size: 25px;
+            z-index: -1;
+            font-family: 'Frank Ruhl Libre', serif;
+        }
+        .lugar-text {
+            position: relative;
+            width: 270px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            color: #dddddd;
+            font-size: 20px;
+            z-index: 1;
+        }
+        
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 5px;
+            transform: translateX(-20px);
+        }
+
+        li:nth-child(2) {
+            transform: translateX(-10px);
+        }
+        li:nth-child(3) {
+            transform: translateX(0px);
+        }
+        li:nth-child(4) {
+            transform: translateX(10px);
+        }
+        li:nth-child(5) {
+            transform: translateX(20px);
+        }
+        li:nth-child(6) {
+            transform: translateX(30px);
+        }
+        li:nth-child(7) {
+            transform: translateX(40px);
+        }
+        li:nth-child(8) {
+            transform: translateX(50px);
+        }
+
+        .btn {
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #fff;
+            background-color: #27616b;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease-out;
+          }
+          
+          .btn:hover {
+            background-color: #55acbb;
+          }
+          
+          .btn:active {
+            transform: translateY(1px);
+            box-shadow: none;
+          }
     </style>
 </head>
 
@@ -95,7 +201,44 @@
     </div>
     <div class="bienvenida">
         <p>LES COMPARTIMOS DE NUESTRA ALEGRÍA POR ESTOS 25 AÑOS UNIDOS CON LA GRACIA DE DIOS Y...</p>
+        <br>
+        <p>CON LA COMPAÑÍA DE NUESTROS HIJOS:</p>
     </div>
+    <div class="nombre-hijos">
+        <ul>
+            <li>Diana Leticia</li>
+            <li>Juan Pablo</li>
+            <li>Francisco Guadalupe</li>
+            <li>Miriam de los Angeles</li>
+            <li>Alejandro</li>
+            <li>Jesús Emmanuel</li>
+            <li>Mariam Lizeth</li>
+            <li>Fátima Guadalupe</li>
+        </ul>
+    </div>
+    <div class="bienvenida">
+        <p>Los invitamos a la misa de acción de gracias en la parroquia de San Miguel Arcangel</p>
+    </div>
+    <div class="parroquia">
+        <div class="parroquia-text">
+            <p>En la Colonia Moctezuma, Tepic Nayarit México.</p>
+            <p>El sábado 1 de abril del 2023 a las 13:00 horas.</p>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <a href="https://goo.gl/maps/H5nNNe1Cj91p3yJP7" class="btn">Ubicación</a>
+    </div>
+    <div class="lugar">
+        <div class="lugar-text">
+            <p>Recepción</p>
+            <p>Casino los Fresnos.</p>
+            <p>El sábado 1 de abril del 2023 a las 14:30 horas.</p>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <a href="https://goo.gl/maps/KNnsRJJvwYcpZ5j37" class="btn">Ubicación</a>
+    </div>
+    
     <script>
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
