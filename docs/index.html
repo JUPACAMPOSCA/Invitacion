@@ -78,6 +78,7 @@
             text-align: center;
             font-family: 'Frank Ruhl Libre', serif;
         }
+
         .nombre-hijos {
             position: relative;
             background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/Invitacion/master/docs/familia.png');
@@ -88,6 +89,7 @@
             z-index: -1;
             font-family: 'Frank Ruhl Libre', serif;
         }
+
         .parroquia {
             position: relative;
             background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/Invitacion/master/docs/parroquia.webp');
@@ -98,6 +100,7 @@
             z-index: -1;
             font-family: 'Frank Ruhl Libre', serif;
         }
+
         .parroquia-text {
             position: relative;
             width: 270px;
@@ -108,6 +111,7 @@
             font-size: 20px;
             z-index: 1;
         }
+
         .lugar {
             position: relative;
             background-image: url('https://raw.githubusercontent.com/JUPACAMPOSCA/Invitacion/master/docs/casino.jpg');
@@ -118,6 +122,7 @@
             z-index: -1;
             font-family: 'Frank Ruhl Libre', serif;
         }
+
         .lugar-text {
             position: relative;
             width: 270px;
@@ -128,7 +133,7 @@
             font-size: 20px;
             z-index: 1;
         }
-        
+
         ul {
             list-style: none;
         }
@@ -141,21 +146,27 @@
         li:nth-child(2) {
             transform: translateX(-10px);
         }
+
         li:nth-child(3) {
             transform: translateX(0px);
         }
+
         li:nth-child(4) {
             transform: translateX(10px);
         }
+
         li:nth-child(5) {
             transform: translateX(20px);
         }
+
         li:nth-child(6) {
             transform: translateX(30px);
         }
+
         li:nth-child(7) {
             transform: translateX(40px);
         }
+
         li:nth-child(8) {
             transform: translateX(50px);
         }
@@ -173,16 +184,23 @@
             border-radius: 4px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
             transition: background-color 0.3s ease-out;
-          }
-          
-          .btn:hover {
+        }
+
+        .btn:hover {
             background-color: #55acbb;
-          }
-          
-          .btn:active {
+        }
+
+        .btn:active {
             transform: translateY(1px);
             box-shadow: none;
-          }
+        }
+
+        .desp {
+            background-color: #C0C0C0;
+            font-size: 30px;
+            font-family: 'Fleur De Leah', cursive;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -238,7 +256,9 @@
     <div style="display: flex; flex-direction: column; align-items: center;">
         <a href="https://goo.gl/maps/KNnsRJJvwYcpZ5j37" class="btn">Ubicación</a>
     </div>
-    
+    <div class="desp">
+        <p>¡Contamos con su asistencia, Gracias!</p>
+    </div>
     <script>
         $(window).scroll(function () {
             var scroll = $(window).scrollTop();
